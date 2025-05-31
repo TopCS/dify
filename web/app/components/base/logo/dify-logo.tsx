@@ -5,9 +5,12 @@ import useTheme from '@/hooks/use-theme'
 import { basePath } from '@/utils/var'
 export type LogoStyle = 'default' | 'monochromeWhite'
 
+const defaultLogo = process.env.NEXT_PUBLIC_BRAND_LOGO || '/logo/logo.svg'
+const defaultMonochromeLogo = process.env.NEXT_PUBLIC_BRAND_LOGO_WHITE || '/logo/logo-monochrome-white.svg'
+
 export const logoPathMap: Record<LogoStyle, string> = {
-  default: '/logo/logo.svg',
-  monochromeWhite: '/logo/logo-monochrome-white.svg',
+  default: defaultLogo,
+  monochromeWhite: defaultMonochromeLogo,
 }
 
 export type LogoSize = 'large' | 'medium' | 'small'
